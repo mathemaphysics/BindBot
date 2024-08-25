@@ -10,5 +10,15 @@
 			"DEVUID": "1000",
 			"DEVGID": "1000"
 		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.debugpy",
+				"donjayamanne.python-extension-pack",
+				"donjayamanne.python-environment-manager"
+			]
+		}
 	}
 }
