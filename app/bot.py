@@ -17,6 +17,10 @@ if secrets_path.exists():
 else:
     raise Exception("Secrets path does not exist")
 
+# Make sure token isn't empty
+if len(token) == 0:
+    raise Exception("Token loaded but empty")
+
 # Define the bot's prefix (what you type before commands)
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents, )
