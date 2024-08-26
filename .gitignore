@@ -163,3 +163,5 @@ cython_debug/
 
 # Custom
 secrets.json
+gromacs*
+install/**

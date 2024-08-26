@@ -1,8 +1,9 @@
 from pathlib import Path
-from discord import Intents
+from discord import Intents, File
 from discord.ext import commands
 from json import load
 from log.botlog import BotLogger, INFO, ERROR, DEBUG
+from typing import Union
 
 # Flamingly global configuration stuff
 bot_name = "None"
@@ -65,6 +66,17 @@ async def ping(ctx):
 @bot.command()
 async def hello(ctx):
     await ctx.send('Hello! How can I assist you today?')
+
+@bot.command()
+async def image(ctx, image_path: Union[str, Path] = ""):
+    image_path_obj = Path(image_path)
+    if not image_path_obj.exists():
+        await ctx.send(f"Could not find {str(image_path_obj)}")
+    else:
+        with image_path_obj.open("rb") as fp:
+            image_data = File(fp)
+            await ctx.send(f"Argument: {str(image_path_obj)}")
+            await ctx.send("Your image", file=image_data)
 
 # Run the bot with your token
 bot.run(bot_token)

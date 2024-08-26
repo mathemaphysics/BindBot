@@ -1,5 +1,5 @@
 import sys
-from logging import Logger, getLogger, Formatter, StreamHandler, INFO, ERROR, DEBUG
+from logging import Logger, Formatter, StreamHandler, INFO, ERROR, DEBUG
 
 class BotLogger(Logger):
 	def __init__(self, name: str = __name__, level: int = INFO):
