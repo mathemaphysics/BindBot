@@ -30,6 +30,11 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     logger.info(f'Logged in as {bot.user.name} ({bot.user.id})')
 
+# Event: When message received
+@bot.event
+async def on_message(message):
+    logger.info(f'MessageID: {message.id} Author: {message.author} Content: {message.content}')
+
 # Command: Respond to a simple ping command
 @bot.command()
 async def ping(ctx):

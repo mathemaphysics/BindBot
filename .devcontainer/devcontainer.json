@@ -17,7 +17,8 @@
 				"ms-python.python",
 				"ms-python.debugpy",
 				"donjayamanne.python-extension-pack",
-				"donjayamanne.python-environment-manager"
+				"donjayamanne.python-environment-manager",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
