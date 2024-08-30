@@ -6,6 +6,7 @@
 		"dockerfile": "Dockerfile",
 		"args":
 		{
+			"BOTNAME": "BindBot", // Better make sure this matches the folder
 			"DEVUSER": "devuser",
 			"DEVUID": "1000",
 			"DEVGID": "1000"
